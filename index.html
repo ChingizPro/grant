@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IT Grant Olimpiadasi — Ro‘yxatdan o‘tish</title>
+    <meta
+      name="description"
+      content="IT Grant olimpiadasiga ro‘yxatdan o‘ting."
+    />
+
+    <style>
+      :root {
+        --bg: #f6f7fb;
+        --card: #fff;
+        --text: #111827;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --accent: #2563eb;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial;
+        background: var(--bg);
+        color: var(--text);
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 40px auto;
+        padding: 0 16px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+      }
+      .hero {
+        padding: 22px 22px 14px;
+        border-bottom: 1px solid var(--border);
+      }
+      .hero h1 {
+        margin: 0 0 10px;
+        font-size: 22px;
+      }
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      form {
+        padding: 18px 22px 22px;
+      }
+      .field {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .field:last-child {
+        border-bottom: none;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .req::after {
+        content: " *";
+        color: #dc2626;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="number"],
+      textarea,
+      select {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px 12px;
+        font-size: 15px;
+        outline: none;
+        background: #fff;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+      }
+      textarea {
+        min-height: 96px;
+        resize: vertical;
+      }
+      .hint {
+        margin-top: 8px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .options {
+        display: grid;
+        gap: 10px;
+      }
+      .opt {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+      }
+      .opt input {
+        transform: scale(1.1);
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .btn {
+        appearance: none;
+        border: 0;
+        border-radius: 12px;
+        padding: 12px 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #fff;
+      }
+      .btn-secondary {
+        background: #eef2ff;
+        color: #1f2937;
+      }
+      .btn[disabled] {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .footer {
+        padding: 14px 22px 18px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .hp {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        opacity: 0;
+      }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "874467548673937");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=874467548673937&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <div class="hero">
+          <h1>Kafolat Ta'limda IT Grant olimpiadasi</h1>
+          <p>
+            Ro‘yxatdan o‘ting — olimpiadada 100% dan 12.5% gacha grant yutish
+            imkoniyati.
+          </p>
+          <p class="hint">
+            Telegram:
+            <a href="https://t.me/kafolattalim_uz">@kafolattalim_uz</a>
+          </p>
+        </div>
+
+        <!-- IMPORTANT: paste your Apps Script /exec URL below -->
+        <form
+          id="leadForm"
+          action="https://script.google.com/macros/s/AKfycbze2WMV7keQhjdqu1k0CGaaU7kpLkJZI86UKMAmtWKRuvFc2sZ-OJ24l96-aXgl8h8q/exec
+"
+          method="POST"
+          novalidate
+        >
+          <!-- honeypot -->
+          <div class="hp">
+            <label>Company</label>
+            <input type="text" name="company" autocomplete="off" />
+          </div>
+
+          <!-- Tracking hidden fields -->
+          <input type="hidden" name="utm_source" />
+          <input type="hidden" name="utm_medium" />
+          <input type="hidden" name="utm_campaign" />
+          <input type="hidden" name="utm_content" />
+          <input type="hidden" name="utm_term" />
+          <input type="hidden" name="fbclid" />
+          <input type="hidden" name="fbp" />
+          <input type="hidden" name="fbc" />
+          <input type="hidden" name="event_id" />
+          <input type="hidden" name="page_url" />
+          <input type="hidden" name="user_agent" />
+
+          <div class="field">
+            <label for="fname" class="req">Ism, familiya?</label>
+            <input
+              id="fname"
+              name="fullName"
+              type="text"
+              placeholder="Masalan: Ali Valiyev"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="tel" class="req">Telefon raqamingiz?</label>
+            <input
+              id="tel"
+              name="phone"
+              type="tel"
+              placeholder="+998 90 123 45 67"
+              required
+              inputmode="tel"
+            />
+            <div class="hint">Telefon raqamni to‘liq kiriting.</div>
+          </div>
+
+          <div class="field">
+            <label for="age" class="req">Yoshingiz? (12–18y)</label>
+            <input
+              id="age"
+              name="age"
+              type="number"
+              min="12"
+              max="18"
+              required
+            />
+            <div class="hint">Faqat 12–18 oralig‘i.</div>
+          </div>
+
+          <div class="field">
+            <label for="school" class="req"
+              >Qaysi maktabning nechanchi sinfida o'qiysiz?</label
+            >
+            <input
+              id="school"
+              name="school"
+              type="text"
+              placeholder="Masalan: Termiz shahar 12-maktab, 9-sinf"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label class="req"
+              >Olimpiada 25-yanvar 4ta vaqtda o'tkaziladi sizga qaysi vaqt
+              to'g'ri keladi?</label
+            >
+            <div class="options">
+              <label class="opt"
+                ><input type="radio" name="timeSlot" value="9:00" required />
+                9:00</label
+              >
+              <label class="opt"
+                ><input type="radio" name="timeSlot" value="11:00" />
+                11:00</label
+              >
+              <label class="opt"
+                ><input type="radio" name="timeSlot" value="14:00" />
+                14:00</label
+              >
+              <label class="opt"
+                ><input type="radio" name="timeSlot" value="16:00" />
+                16:00</label
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="reason">Nima uchun GRANT yutmoqchisiz?</label>
+            <textarea
+              id="reason"
+              name="reason"
+              placeholder="Qisqa yozing..."
+            ></textarea>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" id="submitBtn" type="submit">
+              Yuborish
+            </button>
+            <button class="btn btn-secondary" type="reset">Tozalash</button>
+          </div>
+        </form>
+
+        <div class="footer">
+          Parol, karta ma’lumotlari kabi maxfiy ma’lumotlarni kiritmang.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function getCookie(name) {
+        return (
+          document.cookie
+            .split("; ")
+            .find((row) => row.startsWith(name + "="))
+            ?.split("=")[1] || ""
+        );
+      }
+
+      function getParam(name) {
+        const url = new URL(location.href);
+        return url.searchParams.get(name) || "";
+      }
+      function uuid() {
+        return (
+          crypto?.randomUUID?.() ||
+          Date.now() + "-" + Math.random().toString(16).slice(2)
+        );
+      }
+
+      (function initTracking() {
+        const form = document.getElementById("leadForm");
+
+        [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_content",
+          "utm_term",
+        ].forEach((k) => {
+          form.elements[k].value = getParam(k);
+        });
+
+        const fbclid = getParam("fbclid");
+        form.elements.fbclid.value = fbclid;
+        if (fbclid)
+          form.elements.fbc.value = `fb.1.${Math.floor(Date.now() / 1000)}.${fbclid}`;
+
+        form.elements.fbp.value = getCookie("_fbp");
+
+        const eventId = uuid();
+        form.elements.event_id.value = eventId;
+
+        form.elements.page_url.value = location.href;
+        form.elements.user_agent.value = navigator.userAgent;
+      })();
+
+      document.getElementById("leadForm").addEventListener("submit", (e) => {
+        const form = e.target;
+
+        const age = Number(form.elements.age.value);
+        if (!Number.isFinite(age) || age < 12 || age > 18) {
+          e.preventDefault();
+          alert("Yosh 12–18 oralig'ida bo‘lishi kerak.");
+          form.elements.age.focus();
+          return;
+        }
+
+        // Normalize UZ phone to +998XXXXXXXXX
+        const raw = form.elements.phone.value.trim();
+        const digits = raw.replace(/\D/g, "");
+
+        let normalized = digits;
+        if (digits.length === 9) normalized = "998" + digits;
+        if (digits.length === 12 && digits.startsWith("998"))
+          normalized = digits;
+
+        if (!(normalized.length === 12 && normalized.startsWith("998"))) {
+          e.preventDefault();
+          alert("Telefon raqam noto‘g‘ri. Masalan: +998901234567");
+          form.elements.phone.focus();
+          return;
+        }
+        form.elements.phone.value = "+" + normalized;
+
+        const btn = document.getElementById("submitBtn");
+        btn.disabled = true;
+        btn.textContent = "Yuborilmoqda...";
+
+        // Safety fallback in case something blocks navigation
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = "Yuborish";
+        }, 7000);
+      });
+    </script>
+  </body>
+</html>
