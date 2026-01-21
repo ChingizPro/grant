@@ -1,0 +1,272 @@
+:root {
+  /* Brand colors */
+  --primary: #003945;
+  --accent: #efa400;
+  --muted: #8da6aa;
+  --white: #ffffff;
+
+  /* UI colors */
+  --bg: #f4f7f8;
+  --card: var(--white);
+  --text: #0f172a;
+  --border: #dbe3e6;
+  --danger: #dc2626;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Layout */
+.wrap {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Hero */
+.hero {
+  padding: 26px 24px 18px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 57, 69, 0.04),
+    rgba(0, 57, 69, 0)
+  );
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Form */
+form {
+  padding: 20px 24px 24px;
+}
+
+.field {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.field:last-child {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.req::after {
+  content: " *";
+  color: var(--danger);
+}
+
+/* Inputs */
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  background: var(--white);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa8ad;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 57, 69, 0.15);
+}
+
+Validation feedback
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-color: var(--danger);
+}
+
+input:invalid:focus,
+textarea:invalid:focus,
+select:invalid:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Hints */
+.hint {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Options (radio) */
+.options {
+  display: grid;
+  gap: 10px;
+}
+
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.opt:hover {
+  border-color: var(--primary);
+  background: rgba(0, 57, 69, 0.04);
+}
+
+.opt input {
+  transform: scale(1.15);
+  accent-color: var(--primary);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    transform 0.05s ease,
+    box-shadow 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(180deg, var(--accent), #e0a000);
+  color: #1f2937;
+  box-shadow: 0 8px 20px rgba(239, 164, 0, 0.35);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 26px rgba(239, 164, 0, 0.45);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: #eef3f4;
+  color: var(--primary);
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Footer */
+.footer {
+  padding: 16px 24px 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Honeypot */
+.hp {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+}
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+@media screen and (max-width: 550px) {
+  .logo {
+    width: 180px;
+  }
+  .wrap {
+    margin: 25px auto;
+  }
+  .hero {
+    padding: 20px 15px;
+  }
+  form {
+    padding: 15px;
+  }
+}

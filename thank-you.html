@@ -1,53 +1,76 @@
 <!doctype html>
 <html lang="uz">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rahmat! Arizangiz qabul qilindi</title>
-  <meta name="robots" content="noindex" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rahmat! Arizangiz qabul qilindi</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '874467548673937');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=874467548673937&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+    <link rel="stylesheet" href="./css/thank-you.css" />
 
-  <style>
-    body { margin:0; font-family:system-ui; background:#f6f7fb; color:#111827; }
-    .box { max-width:720px; margin:60px auto; padding:0 16px; }
-    .card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:22px; box-shadow:0 10px 30px rgba(0,0,0,.06); }
-    h1 { margin:0 0 10px; font-size:22px; }
-    p { margin:0; color:#6b7280; line-height:1.6; }
-    a { color:#2563eb; text-decoration:none; }
-  </style>
-</head>
-<body>
-  <div class="box">
-    <div class="card">
-      <h1>Rahmat! ✅</h1>
-      <p>Arizangiz qabul qilindi. Tez orada siz bilan bog‘lanamiz.</p>
-      <p style="margin-top:10px"><a href="/">Bosh sahifaga qaytish</a></p>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "874467548673937");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=874467548673937&ev=PageView&noscript=1"
+    /></noscript>
+  </head>
+  <body>
+    <div class="box">
+      <div class="card">
+        <img src="./media/logo_main.png" alt="website logo" class="logo" />
+        <h1>Rahmat! ✅</h1>
+        <p>Arizangiz qabul qilindi. Tez orada siz bilan bog‘lanamiz.</p>
+        <p style="margin-top: 10px"><a href="/">Bosh sahifaga qaytish</a></p>
+      </div>
     </div>
-  </div>
 
-  <script>
-    // Fire conversion on Thank You page (real lead)
-    const eventId = new URL(location.href).searchParams.get("event_id") || "";
+    <script>
+      // Fire conversion on Thank You page (real lead)
+      const eventId = new URL(location.href).searchParams.get("event_id") || "";
 
-    // eventID helps with dedup if you later add Conversions API
-    fbq('track', 'Lead', { content_name: 'IT Grant Olimpiadasi' }, eventId ? { eventID: eventId } : undefined);
-  </script>
-</body>
+      // eventID helps with dedup if you later add Conversions API
+      fbq(
+        "track",
+        "Lead",
+        { content_name: "IT Grant Olimpiadasi" },
+        eventId ? { eventID: eventId } : undefined,
+      );
+    </script>
+  </body>
 </html>
